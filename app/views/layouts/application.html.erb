@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR" class="h-100">
   <head>
     <title>Colcho.Net</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,7 +9,13 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
-    <%= yield %>
+  <body class="d-flex flex-column h-100" id="body-nav">
+    <%= render 'layouts/navigation' %>
+    <main class="flex-shrink-0" id="page-content">
+      <div class="mb-3 container d-flex justify-content-center flex-column align-items-center">
+        <%= yield %>
+      </div>
+    </main>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -1,5 +1,2 @@
-<h1>New Room</h1>
-
-<%= render 'form', room: @room %>
-
-<%= link_to 'Back', rooms_path %>
+<h1 class="my-3">Novo Quarto</h1>
+<%= render partial: 'form', locals: {title_button: "Criar usuário"} %>

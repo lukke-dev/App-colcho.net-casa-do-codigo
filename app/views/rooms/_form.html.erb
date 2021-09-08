@@ -1,32 +1,18 @@
-<%= form_with(model: room) do |form| %>
-  <% if room.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
-
-      <ul>
-        <% room.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<%= render 'shared/errors', obj: @room %>
+<%= form_for @room do |form|%>
+  <div>
+    <%= form.label :title, "Titulo", class:"form-label" %>
+    <%= form.text_field :title, class: "form-control h-75" %>
   </div>
-
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
+  <div>
+    <%= form.label :location, "Local", class:"form-label" %>
+    <%= form.text_field :location, class: "form-control h-75" %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div>
+    <%= form.label :description, "Descrição", class:"form-label" %>
+    <%= form.text_area :description, class: "form-control h-75" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="text-center">
+    <%= form.submit title_button, class: "btn btn-info text-white mt-3" %>
   </div>
 <% end %>

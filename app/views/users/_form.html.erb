@@ -1,39 +1,30 @@
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2>Os seguintes erros Ocorreram</h2>
-    <ul>
-      <% @user.errors.full_messages.each do |err| %>
-        <li> <%= err %> </li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<%= render 'shared/errors', obj: @user %>
 <%= form_for @user do |form|%>
   <div>
-    <%= form.label :full_name, "Nome Completo" %>
-    <%= form.text_field :full_name %>
+    <%= form.label :full_name, "Nome Completo", class:"form-label" %>
+    <%= form.text_field :full_name, class: "form-control h-75"  %>
   </div>
   <div>
-    <%= form.label :location, "Localização" %>
-    <%= form.text_field :location %>
+    <%= form.label :location, "Localização", class:"form-label" %>
+    <%= form.text_field :location, class: "form-control h-75" %>
   </div>
   <div>
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.label :email, class:"form-label" %>
+    <%= form.text_field :email, class: "form-control h-75" %>
   </div>
   <div>
-    <%= form.label :password, "Senha" %>
-    <%= form.password_field :password %>
+    <%= form.label :password, "Senha", class:"form-label" %>
+    <%= form.password_field :password, class: "form-control h-75" %>
   </div>
   <div>
-    <%= form.label :password_confirmation, "Confirmar Senha" %>
-    <%= form.password_field :password_confirmation %>
+    <%= form.label :password_confirmation, "Confirmar Senha", class:"form-label" %>
+    <%= form.password_field :password_confirmation, class: "form-control h-75" %>
   </div>
   <div>
-    <%= form.label :bio %>
-    <%= form.text_area :bio %>
+    <%= form.label :bio, class:"form-label" %>
+    <%= form.text_area :bio, class: "form-control h-75"%>
   </div>
-  <div>
-    <%= form.submit %>
+  <div class="text-center">
+    <%= form.submit class: "btn btn-info text-white mt-3" %>
   </div>
 <% end %>

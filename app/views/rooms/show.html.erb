@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @room.title %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @room.location %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @room.description %>
-</p>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://www.tuacasa.com.br/wp-content/uploads/2020/08/quadros-para-quarto-de-casal-capa.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= @room.title %></h5>
+          <h4 class="card-title"><%= @room.location %></h4>
+          <p class="card-text"><%= @room.description %></p>
+          <a href="#" class="btn btn-primary">Alugar</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
