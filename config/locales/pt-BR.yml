@@ -2,6 +2,7 @@
 pt-BR:
   activerecord:
     models:
+      room: Quarto
       user: Usuário
     attributes:
       user:
@@ -10,6 +11,10 @@ pt-BR:
         full_name: Nome completo
         location: Localização
         password: Senha
+      room:
+        description: Descrição
+        location: Localização
+        title: Título
     password_confirmation: Confirme sua senha
     errors:
       messages:
