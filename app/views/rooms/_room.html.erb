@@ -12,7 +12,7 @@
         <tr>
           <td><%= room.title %></td>
           <td><%= room.location %></td>
-          <td><%= room.description %></td>
+          <td><%= truncate(room.description, length: 30) %></td>
           <td>
             <%= link_to "Ver quarto", room_path(room), class: "btn btn-outline-primary" %>
             <%= link_to "Editar", edit_room_url(room), class: "btn btn-outline-dark" %>
