@@ -1,5 +1,15 @@
 ---
 pt-BR:
+  users:
+    new:
+      title: Novo usuário
+    edit:
+      title: Editar usuário
+  rooms:
+    new:
+      title: Novo quarto
+    edit:
+      title: Editar quarto
   activerecord:
     models:
       room: Quarto
@@ -11,11 +21,11 @@ pt-BR:
         full_name: Nome completo
         location: Localização
         password: Senha
+        password_confirmation: Confirme sua senha
       room:
         description: Descrição
         location: Localização
         title: Título
-    password_confirmation: Confirme sua senha
     errors:
       messages:
         record_invalid: "A validação falhou: %{errors}"

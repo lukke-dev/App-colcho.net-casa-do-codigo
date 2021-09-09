@@ -14,8 +14,8 @@
           <td><%= room.location %></td>
           <td><%= room.description %></td>
           <td>
-            <%= link_to "Ver quarto", room, class: "btn btn-outline-primary" %>
-            <%= link_to "Editar", edit_room_path(room), class: "btn btn-outline-dark" %>
+            <%= link_to "Ver quarto", room_path(room), class: "btn btn-outline-primary" %>
+            <%= link_to "Editar", edit_room_url(room), class: "btn btn-outline-dark" %>
             <%= link_to "Apagar", room, method: :delete, class: "btn btn-outline-danger", data: {confirm: "Tem certeza que quer deletar este quarto?"} %>
           </td>
         </tr>

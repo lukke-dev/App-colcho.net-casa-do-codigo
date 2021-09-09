@@ -1,15 +1,15 @@
 <%= render 'shared/errors', obj: @room %>
 <%= form_for @room do |form|%>
   <div>
-    <%= form.label :title, "Titulo", class:"form-label" %>
+    <%= form.label :title, class:"form-label" %>
     <%= form.text_field :title, class: "form-control h-75" %>
   </div>
   <div>
-    <%= form.label :location, "Local", class:"form-label" %>
+    <%= form.label :location, class:"form-label" %>
     <%= form.text_field :location, class: "form-control h-75" %>
   </div>
   <div>
-    <%= form.label :description, "Descrição", class:"form-label" %>
+    <%= form.label :description, class:"form-label" %>
     <%= form.text_area :description, class: "form-control h-75" %>
   </div>
   <div class="text-center">
